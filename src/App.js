@@ -8,7 +8,7 @@ import { light, dark } from './theme';
 
 function App() {
   const { theme, toggleTheme } = useTheme();
-  const [device, setDevice] = useState(window.outerWidth < 750 ? 'mobile' : 'pc');
+  const [device, setDevice] = useState();
   const [toggleMobile, setToggleMobile] = useState(false);
 
   useEffect(() => {
@@ -19,6 +19,8 @@ function App() {
       } else if (window.outerWidth < 750 && device !== 'mobile') setDevice('mobile');
     };
     window.addEventListener('resize', resizing);
+    resizing();
+    console.log(device);
     return () => {
       window.removeEventListener('resize', resizing);
     };
