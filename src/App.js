@@ -20,6 +20,7 @@ function App() {
     };
     window.addEventListener('resize', resizing);
     resizing();
+    console.log(device);
     return () => {
       window.removeEventListener('resize', resizing);
     };
