@@ -13,14 +13,13 @@ function App() {
 
   useEffect(() => {
     const resizing = () => {
-      if (window.outerWidth >= 750 && device !== 'pc') {
+      if (window.innerWidth >= 750 && device !== 'pc') {
         setDevice('pc');
         if (toggleMobile) setToggleMobile(false);
-      } else if (window.outerWidth < 750 && device !== 'mobile') setDevice('mobile');
+      } else if (window.innerWidth < 750 && device !== 'mobile') setDevice('mobile');
     };
     window.addEventListener('resize', resizing);
     resizing();
-    console.log(device);
     return () => {
       window.removeEventListener('resize', resizing);
     };
