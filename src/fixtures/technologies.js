@@ -8,5 +8,6 @@ export const technologies = [
   { name: 'NodeJS', iconId: 6 },
   { name: 'ExpressJS', iconId: 7 },
   { name: 'PostgreSQL', iconId: 8 },
-  { name: 'Firebase', iconId: 9 }
+  { name: 'MongoDB', iconId: 9 },
+  { name: 'GraphQL', iconId: 10 },
 ];
